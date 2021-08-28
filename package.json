@@ -1,0 +1,19 @@
+{
+  "name": "harukinotes",
+  "version": "0.0.0",
+  "description": "A small Node.js application to create HTML documents from Markdown using markdown-it.",
+  "main": "harukinotes.js",
+  "scripts": {
+    "test": "node harukinotes _src _out"
+  },
+  "repository": {
+    "type": "git",
+    "url": "HarukiNotes"
+  },
+  "author": "DanielSDVG",
+  "license": "ISC",
+  "dependencies": {
+    "glob": "^7.1.7",
+    "pug": "^3.0.2"
+  }
+}
