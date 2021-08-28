@@ -19,19 +19,19 @@ This is a small project to generate cute HTML documents out of Markdown files.
 
 This will convert Markdown files in the `_src` folder into HTML files in the `_out` folder. Any files such as images and other resources that are not `.md` nor `.html` files will also be copied from `_src` to `_out`.
 
-You could also generate an executable using `pkg` (STILL NOT WORKING):
+You could also generate an executable using `pkg`:
 
 ```
 npm install pkg --global
 pkg .
 ```
 
-Add it to your `PATH` variable and then you can parse your Markdown from anywhere using the command line:
+Add it to your `PATH` variable and then you can parse your Markdown from anywhere using the command line (depending on your operative system)
 
 ```
-harukinotes-win
-harukinotes-linux
-harukinotes-macos
+harukinotes-win src out
+harukinotes-linux src out
+harukinotes-macos src out
 ```
 
 
