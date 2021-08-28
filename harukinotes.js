@@ -1,10 +1,9 @@
 const fs = require('fs');
 const glob = require('glob');
 
-const parser = require('./parser');
+const parser = require('./parser.js');
 
 
-// Parse arguments
 // =======================================================================================
 
 parseArgs = function(args) {
@@ -36,19 +35,24 @@ if (!parsedArgs.error) {
           // Parse Markdown files
           console.log(`Parsing Markdown files... (${sources.length})`);
           sources.forEach((srcpath) => {
-            const outpath = parsedArgs.destdir + srcpath.slice(parsedArgs.sourcedir.length);
-            parser.parse(srcpath, outpath, () => console.log(`${srcpath} parsed`));
+            const outpath = parsedArgs.destdir + srcpath.slice(parsedArgs.sourcedir.length).replace(/\.md$/, '.html');
+            parser.parse(srcpath, outpath, () => console.log(`${srcpath} -> ${outpath}`));
           });
 
           // Copy images and other resources that are required to render
           // HTML files correctly
-          if (images.length > 0) {
+          /*if (images.length > 0) {
             console.log(`Copying images and other resources... (${images.length})`);
             images.forEach((srcpath) => {
               const outpath = parsedArgs.destdir + srcpath.slice(parsedArgs.sourcedir.length);
-              fs.copyFileSync(srcpath, outpath);
+              fs.mkdirSync()
+              fs.copyFile(srcpath, outpath, (err) => {
+                if (err) {
+                  console.error(`Could not copy "${srcpath}": ${err.message}`);
+                }
+              });
             });
-          }
+          }*/
 
         } else {
           console.log('No .md files found.');
