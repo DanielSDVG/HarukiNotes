@@ -18,3 +18,39 @@ This is a small project to generate cute HTML documents out of Markdown files.
    ```
 
 This will convert Markdown files in the `_src` folder into HTML files in the `_out` folder. Any files such as images and other resources that are not `.md` nor `.html` files will also be copied from `_src` to `_out`.
+
+
+## Markdown metadata
+
+All `.md` files must include a YAML header in the beginning of the file, like this:
+
+```yaml
+---
+title: HarukiNotes test page
+subtitle: This is just a test
+author: DanielSDVG
+stylesheet: ../css/haruki_blue.css
+---
+```
+
+Here you can enter a title for the HTML document, a subtitle (optional), the author and the path to the stylesheet to use (relative to the `.md` file).
+
+
+## Parsing Sass stylesheets
+
+For better customization, I recommend to install these dependencies:
+
+```
+npm install gulp-cli --global
+npm install gulp gulp-sass sass --save-dev
+```
+
+This way we can use [Gulp](https://gulpjs.com/) to build [Sass](https://sass-lang.com) stylesheets as CSS. Sass source files to transpile the example theme can be found in the `sass` directory in this repository. Resulting CSS is output to `css`.
+
+Once you've installed Gulp, execute
+
+```
+gulp sass
+```
+
+to transpile your Sass stylesheets. Files in subdirectories of `css` and partials (`_*.scss`) are ignored.
