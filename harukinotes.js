@@ -1,5 +1,6 @@
 const fs = require('fs');
 const glob = require('glob');
+const path = require('path');
 
 const parser = require('./parser.js');
 
@@ -21,6 +22,15 @@ parseArgs = function(args) {
   return result;
 }
 
+ensureDirectory = function(dirname) {
+  if (!fs.existsSync(dirname)) {
+    fs.mkdirSync(dirname);
+  }
+}
+
+
+// =======================================================================================
+
 const parsedArgs = parseArgs(process.argv.slice(2));
 if (!parsedArgs.error) {
   fs.stat(parsedArgs.sourcedir, (err, stats) => {
@@ -41,18 +51,25 @@ if (!parsedArgs.error) {
 
           // Copy images and other resources that are required to render
           // HTML files correctly
-          /*if (images.length > 0) {
-            console.log(`Copying images and other resources... (${images.length})`);
+          if (images.length > 0) {
+            console.log(`Copying images and other resources...`);
             images.forEach((srcpath) => {
-              const outpath = parsedArgs.destdir + srcpath.slice(parsedArgs.sourcedir.length);
-              fs.mkdirSync()
-              fs.copyFile(srcpath, outpath, (err) => {
-                if (err) {
-                  console.error(`Could not copy "${srcpath}": ${err.message}`);
-                }
-              });
+
+              const srcstats = fs.statSync(srcpath);
+              if (srcstats.isFile()) {
+                
+                const outpath = parsedArgs.destdir + srcpath.slice(parsedArgs.sourcedir.length);
+                ensureDirectory(path.dirname(outpath));
+                fs.copyFile(srcpath, outpath, (err) => {
+                  if (err) {
+                    console.error(`Could not copy "${srcpath}": ${err.message}`);
+                  }
+                });
+
+              }
+              
             });
-          }*/
+          }
 
         } else {
           console.log('No .md files found.');
