@@ -1,0 +1,69 @@
+@use 'theme' as t;
+
+@media print {
+  body {
+    font-size: t.$print-font-size;
+  }
+
+  #content {
+    padding: 0;
+  }
+
+  mark {
+    background-color: transparent;
+  }
+
+  img, picture, video, embed, object, audio {
+    break-inside: avoid;
+  }
+}
+
+@page {
+  margin: t.$print-margin;
+
+  @top-left {
+    margin: t.$page-header-margin;
+    border-bottom: t.$base-border-width solid t.$col-primary;
+    padding-bottom: t.$header-rule-padding;
+
+    font-family: t.$base-font-family;
+    font-size: t.$print-font-size;
+    color: t.$col-primary-darker;
+  }
+  
+  @top-right {
+    margin: t.$page-header-margin;
+    border-bottom: t.$base-border-width solid t.$col-primary;
+    padding-bottom: t.$header-rule-padding;
+
+    font-family: t.$base-font-family;
+    font-size: t.$print-font-size;
+    color: t.$col-primary-darker;
+  }
+
+  @bottom-center {
+    content: counter(page) " / " counter(pages);
+    margin: t.$page-footer-margin;
+    border-top: 1px solid t.$col-primary;
+    padding-top: t.$footer-rule-padding;
+
+    font-family: t.$base-font-family;
+    font-size: t.$print-font-size;
+    color: t.$col-primary-darker;
+  }
+  
+}
+
+@page :first {
+  @top-left {
+    content: none;
+  }
+  
+  @top-right {
+    content: none;
+  }
+
+  @bottom-center {
+    content: none;
+  }
+}

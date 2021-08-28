@@ -1,0 +1,127 @@
+@use 'theme' as t;
+
+html {
+  font-family: t.$base-font-family;
+  font-size: t.$screen-font-size;
+  line-height: t.$line-height;
+  -webkit-text-size-adjust: 100%;
+  color: t.$col-text;
+  word-break: break-word;
+}
+
+body {
+  overflow: hidden scroll;
+}
+
+main {
+  display: block;
+}
+
+pre, code, kbd, samp {
+  font-family: t.$mono-font-family;
+  font-size: t.$mono-font-size;
+  font-weight: t.$mono-font-weight;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  &:link {
+    color: t.$col-link;
+  }
+  &:visited {
+    color: t.$col-visited;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code {
+  color: t.$col-code;
+  pre > & {
+    color: inherit;
+  }
+}
+
+small {
+  font-size: t.$small-font-size;
+}
+
+sub,
+sup {
+  font-size: t.$supsub-font-size;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+mark {
+  background-color: t.$col-mark;
+  color: inherit;
+}
+
+hr {
+  border: none;
+}
+
+button,
+input,
+select,
+optgroup,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template, [hidden] {
+  display: none;
+}
+
+::-moz-selection {
+  background-color: t.$col-selection;
+  color: inherit;
+}
+::selection {
+  background-color: t.$col-selection;
+  color: inherit;
+}
+
+#content {
+  width: 100%;
+  max-width: t.$screen-max-width;
+  padding: t.$screen-margin;
+  margin: auto;
+}

@@ -1,0 +1,96 @@
+// Colors
+// =============================================================================
+
+$-red:hsl(0, 100%, 68%);
+$-yellow: hsl(45, 100%, 50%);
+$-green: hsl(147, 100%, 42%);
+$-lightblue: hsl(200, 100%, 63%);
+$-blue: hsl(219, 100%, 58%);
+$-purple: hsl(273, 98%, 59%);
+$-pink: hsl(303, 100%, 74%);
+
+$col-text: black;
+
+$col-primary-lighter: hsl(200, 100%, 85%);
+$col-primary: $-lightblue;
+$col-primary-darker: hsl(200, 100%, 41%);
+$col-selection: hsla(200, 100%, 63%, 0.3);
+
+$col-table-border: hsl(200, 100%, 72%);
+
+$col-secondary: $-purple;
+$col-code: hsl(332, 100%, 60%);
+
+$col-link: $-blue;
+$col-visited: $-purple;
+
+$col-success: $-green;
+$col-warning: $-yellow;
+$col-danger: $-red;
+
+$col-mark: hsla(60, 100%, 50%, 0.4);
+
+// Typography
+// =============================================================================
+
+// Feel free to change the fonts I use to other fonts you like!
+// This is just an example that I personally find cute.
+// 
+// "Modern Love" is my preferred font for titles, which is supplied with
+// Microsoft Office products. However, I don't think I have a license to
+// distribute it through this repository.
+//
+// https://docs.microsoft.com/en-us/typography/font-list/modern-love
+
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+
+$base-font-family: 'Short Stack', cursive;
+$screen-font-size: 14px;
+$print-font-size: 10pt;
+
+$mono-font-family: 'Consolas', 'Courier New', courier, monospace, monospace;
+$mono-font-size: 100%;
+$mono-font-weight: normal;
+
+$heading-font-family: 'Modern Love', 'Short Stack', sans-serif;
+$title-size: 225%;
+$subtitle-size: 100%;
+$heading-sizes: 200%, 175%, 150%, 140%, 130%, 120%;
+$heading-margin-top: 2rem, 1.75rem, 1.5rem, 1.4rem, 1.3rem, 1.2rem;
+
+$line-height: 1.3;
+$small-font-size: 80%;
+$supsub-font-size: 75%;
+
+$content-spacing: 1.5rem;
+$content-sub-spacing: 0.75rem;
+$base-border-width: 1px;
+
+$blockquote-padding: 1rem 2rem;
+$pre-padding: 1rem;
+$border-radius: 4px;
+$hr-margin: 2rem 0;
+
+$list-indent: 2rem;
+$dd-indent: 2rem;
+$dl-font-weight: bolder;
+$th-font-weight: bolder;
+
+$table-caption-side: bottom;
+$table-border-width: $base-border-width;
+$thead-tbody-border-width: 2 * $base-border-width;
+$table-cell-padding: 0.5rem;
+
+
+// Layout settings
+// =============================================================================
+
+$screen-margin: 3rem;
+$print-margin: 2cm;
+
+$page-header-margin: 1cm 0 0.5cm;
+$page-footer-margin: 0.5cm 0 1cm;
+$header-rule-padding: 0.2cm;
+$footer-rule-padding: 0.2cm;
+
+$screen-max-width: 900px;

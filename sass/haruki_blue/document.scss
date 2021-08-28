@@ -1,0 +1,167 @@
+@use 'sass:list';
+@use 'theme' as t;
+
+#title, #subtitle {
+  text-align: center;
+  color: t.$col-primary-darker;
+}
+
+#title {
+  font-family: t.$heading-font-family;
+  font-size: t.$title-size;
+  color: t.$col-primary-darker;
+  text-shadow: 2px 2px 0 t.$col-primary-lighter;
+}
+
+#subtitle {
+  font-size: t.$subtitle-size;
+}
+
+#content {
+
+  // Spacing
+  > * {
+    margin: t.$content-spacing 0 0 0;
+  }
+  > :first-child {
+    margin-top: 0;
+  }
+
+  // Paragraphs
+  > p:not(#subtitle),
+  > ul > li,
+  > ol > li,
+  > dl > dd {
+    text-align: justify;
+  }
+  
+  // Headings
+  h1, h2, h3, h4, h5, h6 {
+    font-family: t.$heading-font-family;
+  }
+  @for $i from 1 through 6 {
+    h#{$i} {
+      font-size: list.nth(t.$heading-sizes, $i);
+      margin-top: list.nth(t.$heading-margin-top, $i);
+    }
+  }
+
+  // Lists
+  ul, ol {
+    padding-left: t.$list-indent;
+  }
+  ul {
+    list-style-type: disc;
+    ul {
+      list-style-type: circle;
+      ul {
+        list-style-type: square;
+      }
+    }
+  }
+  li + li {
+    margin-top: t.$content-sub-spacing;
+  }
+  dt {
+    font-weight: t.$dl-font-weight;
+    color: t.$col-secondary
+  }
+  dd {
+    margin-left: t.$dd-indent;
+  }
+  dt, dd {
+    & + dt, & + dd {
+      margin-top: t.$content-sub-spacing;
+    }
+  }
+
+  // Quotes
+  blockquote {
+    border-top: t.$base-border-width solid t.$col-secondary;
+    border-bottom: t.$base-border-width solid t.$col-secondary;
+    padding: t.$blockquote-padding;
+    color: t.$col-secondary;
+    font-style: italic;
+  }
+
+  // <pre> elements
+  pre {
+    padding: t.$pre-padding;
+    border: t.$base-border-width solid t.$col-primary;
+    border-radius: t.$border-radius;
+    overflow-x: auto;
+  }
+
+  // Tables
+  table {
+    display: table;
+    caption-side: t.$table-caption-side;
+    text-align: left;
+    overflow-x: auto;
+    width: 100%;
+  }
+  tr {
+    border-top: t.$table-border-width solid t.$col-table-border;
+    border-bottom: t.$table-border-width solid t.$col-table-border;
+    &:first-child {
+      border-top-width: 0;
+    }
+    &:last-child {
+      border-bottom-width: 0;
+    }
+  }
+  td, th {
+    padding: t.$table-cell-padding;
+  }
+  th,
+  thead > td,
+  tfoot > td,
+  caption {
+    font-weight: t.$th-font-weight;
+  }
+  thead {
+    border-bottom: t.$thead-tbody-border-width solid t.$col-table-border;
+  }
+  tfoot {
+    border-top: t.$thead-tbody-border-width solid t.$col-table-border;
+  }
+  caption {
+    padding: t.$table-cell-padding;
+  }
+
+  // Horizontal rule
+  hr {
+    border-top: t.$base-border-width solid t.$col-primary;
+    margin: t.$hr-margin;
+  }
+
+  // Subcontent
+  li,
+  dd,
+  td,
+  th,
+  blockquote,
+  figcaption {
+    & > * {
+      margin: t.$content-sub-spacing 0 0 0;
+    }
+    & > :first-child {
+      margin-top: 0;
+    }
+  }
+
+  // Images
+  p {
+    img, picture, video, embed, object, audio {
+      &:only-child {
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+
+  .footnote-backref {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+}
