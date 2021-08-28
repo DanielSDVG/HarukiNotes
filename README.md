@@ -2,7 +2,7 @@
 
 This is a small project to generate cute HTML documents out of Markdown files.
 
-## Quick setup
+## Quick testing
 
 1. Download and open this Node.js project
 2. Install dependencies:
@@ -18,6 +18,21 @@ This is a small project to generate cute HTML documents out of Markdown files.
    ```
 
 This will convert Markdown files in the `_src` folder into HTML files in the `_out` folder. Any files such as images and other resources that are not `.md` nor `.html` files will also be copied from `_src` to `_out`.
+
+You could also generate an executable using `pkg` (STILL NOT WORKING):
+
+```
+npm install pkg --global
+pkg .
+```
+
+Add it to your `PATH` variable and then you can parse your Markdown from anywhere using the command line:
+
+```
+harukinotes-win
+harukinotes-linux
+harukinotes-macos
+```
 
 
 ## Markdown metadata

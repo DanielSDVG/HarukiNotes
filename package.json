@@ -32,5 +32,13 @@
     "gulp": "^4.0.2",
     "gulp-sass": "^5.0.0",
     "sass": "^1.38.2"
+  },
+  "pkg": {
+    "assets": "./template.pug",
+    "targets": ["node16-linux-x64", "node16-macos-x64", "node16-win-x64"],
+    "outputPath": "bin"
+  },
+  "bin": {
+    "harukinotes": "harukinotes.js"
   }
 }
