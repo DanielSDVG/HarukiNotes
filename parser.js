@@ -32,7 +32,7 @@ const yaml = require('js-yaml');
 
 let template;
 try {
-  template = fs.readFileSync('./template.pug', 'utf-8');
+  template = fs.readFileSync(`${__dirname}/template.pug`, 'utf-8');
 } catch (err) {
   console.error(`Cannot open template file "template.pug": ${err.message}`);
 }
