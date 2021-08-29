@@ -1,22 +1,6 @@
 @use 'sass:list';
 @use 'theme' as t;
 
-#title, #subtitle {
-  text-align: center;
-  color: t.$col-primary-darker;
-}
-
-#title {
-  font-family: t.$heading-font-family;
-  font-size: t.$title-size;
-  color: t.$col-primary-darker;
-  text-shadow: 2px 2px 0 t.$col-primary-lighter;
-}
-
-#subtitle {
-  font-size: t.$subtitle-size;
-}
-
 #content {
 
   // Spacing
@@ -38,6 +22,7 @@
   // Headings
   h1, h2, h3, h4, h5, h6 {
     font-family: t.$heading-font-family;
+    color: t.$col-primary-darker;
   }
   @for $i from 1 through 6 {
     h#{$i} {
@@ -160,8 +145,22 @@
     }
   }
 
+  // Footnotes
   .footnote-backref {
     font-family: Arial, Helvetica, sans-serif;
+  }
+
+  // Title and subtitle
+  #title, #subtitle {
+    text-align: center;
+  }
+  #title {
+    font-family: t.$heading-font-family;
+    font-size: t.$title-size;
+    text-shadow: 2px 2px 0 t.$col-primary-lighter;
+  }
+  #subtitle {
+    font-size: t.$subtitle-size;
   }
 
 }
