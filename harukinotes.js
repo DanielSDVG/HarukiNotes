@@ -46,6 +46,7 @@ if (!parsedArgs.error) {
           console.log(`Parsing Markdown files... (${sources.length})`);
           sources.forEach((srcpath) => {
             const outpath = parsedArgs.destdir + srcpath.slice(parsedArgs.sourcedir.length).replace(/\.md$/, '.html');
+            ensureDirectory(path.dirname(outpath));
             parser.parse(srcpath, outpath, () => console.log(`${srcpath} -> ${outpath}`));
           });
 
