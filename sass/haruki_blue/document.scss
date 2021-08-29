@@ -153,6 +153,7 @@
   // Title and subtitle
   #title, #subtitle {
     text-align: center;
+    color: t.$col-primary-darker;
   }
   #title {
     font-family: t.$heading-font-family;
