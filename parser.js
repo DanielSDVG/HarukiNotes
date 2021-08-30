@@ -13,8 +13,15 @@ md.use(require('markdown-it-ins'));
 md.use(require('markdown-it-footnote'));
 md.use(require('markdown-it-deflist'));
 md.use(require('markdown-it-abbr'));
-md.use(require('markdown-it-container'));
-md.use(require('markdown-it-highlightjs'))
+
+// md.use(require('markdown-it-container'));
+
+md.use(require('markdown-it-highlightjs'));
+
+md.use(require('markdown-it-bracketed-spans'));
+md.use(require('markdown-it-attrs', {
+  allowedAttributes: ['id', 'class', 'style']
+}));
 
 md.use(require('./markdown_modules/markdown-it-katex'), {
   throwOnError: true,

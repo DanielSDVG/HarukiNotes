@@ -1,3 +1,5 @@
+/*! Extract from normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
 @use 'theme' as t;
 
 html {
@@ -119,9 +121,14 @@ template, [hidden] {
   color: inherit;
 }
 
-#content {
-  width: 100%;
-  max-width: t.$screen-max-width;
-  padding: t.$screen-margin;
-  margin: auto;
+
+
+// Simple color markup
+// ===================
+
+.text-success {
+  color: t.$col-success;
+}
+.text-danger {
+  color: t.$col-danger;
 }

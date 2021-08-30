@@ -30,7 +30,7 @@ This is a small project to generate cute HTML documents out of Markdown files.
 2. Install dependencies:
 
    ```
-   npm install glob js-yaml katex markdown-it markdown-it-emoji markdown-it-highlightjs markdown-it-sub markdown-it-sup markdown-it-mark markdown-it-ins markdown-it-footnote markdown-it-deflist markdown-it-abbr markdown-it-container pug
+   npm install glob js-yaml katex markdown-it markdown-it-bracketed-spans markdown-it-attrs markdown-it-emoji markdown-it-highlightjs markdown-it-sub markdown-it-sup markdown-it-mark markdown-it-ins markdown-it-footnote markdown-it-deflist markdown-it-abbr markdown-it-container pug
    ```
 
 3. Execute with:

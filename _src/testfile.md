@@ -33,6 +33,11 @@ Supported plugins:
 
   $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 
+* Id, class and style attributes, powered by [`markdown-it-attrs`](https://www.npmjs.com/package/markdown-it-attrs)
+
+  **This text should be red**{.text-danger} and [this one green]{.text-success}
+
+
 *[HTML]: Hypertext Markup Language
 
 Several language-neutral typographic replacements are also implemented: for example, `(c)` becomes (c), and `+-` becomes +-.
@@ -64,6 +69,32 @@ Syntax | Result
 `**Bold text** __Bold text__` | **Bold text** __Bold text__
 `*Italic text* _Italic text_` | *Italic text* _Italic text_
 `~~Strikethrough text~~` | ~~Strikethrough text~~
+
+
+## Some list styles
+
+Advantages of using HarukiNotes:
+
++ Minimalistic
++ Free and open source
++ You can make beautiful documents with it
+
+{.li-plus}
+
+Disadvantages:
+
+- You need a PDF converter (such as [PrinceXML](https://www.princexml.com/)) to create PDFs from HTML. You can also use the default PDF converter from Windows 10, but it does not fully implement the [CSS Paged Media spec](https://www.w3.org/TR/css-page-3/).
+- There are better tools over there. I made this one just for the sake of practicing with Node.js and other tecnologies.
+- Typographic choices can be either good or bad, depending on your taste.
+- But personally I like them! {.li-plus}
+
+{.li-minus}
+
+Things to do with it:
+
+* Feel free to try it if you want!
+
+{.li-gt}
 
 
 ## Definition List Example

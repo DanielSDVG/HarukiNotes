@@ -3,6 +3,11 @@
 
 #content {
 
+  width: 100%;
+  max-width: t.$screen-max-width;
+  padding: t.$screen-margin;
+  margin: auto;
+
   // Spacing
   > * {
     margin: t.$content-spacing 0 0 0;
@@ -48,6 +53,40 @@
     margin-top: t.$content-sub-spacing;
   }
 
+  // Styles for lists
+  .li-plus ::marker, .li-plus::marker,
+  .li-minus ::marker, .li-minus::marker,
+  .li-gt ::marker, .li-gt::marker {
+    font-size: 120%;
+    line-height: 0;
+  }
+
+  .li-plus ::marker {
+    content: '+ ';
+    color: t.$col-success;
+  }
+  .li-minus ::marker {
+    content: '- ';
+    color: t.$col-danger;
+  }
+  .li-gt ::marker {
+    content: '> ';
+    color: t.$col-primary-darker;
+  }
+
+  .li-plus::marker {
+    content: '+ ';
+    color: t.$col-success;
+  }
+  .li-minus::marker {
+    content: '- ';
+    color: t.$col-danger;
+  }
+  .li-gt::marker {
+    content: '> ';
+    color: t.$col-primary-darker;
+  }
+
   // Definition lists
   dt {
     float: left;
@@ -87,6 +126,7 @@
     overflow-x: auto;
     > code {
       padding: 0;
+      overflow-x: visible;
     }
   }
 
