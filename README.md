@@ -2,7 +2,29 @@
 
 This is a small project to generate cute HTML documents out of Markdown files.
 
-## Quick testing
+## How to use it
+
+1. To use this project, download this project and add the `bin` folder to your `PATH` variable.
+2. Create two folders from anywhere:
+
+   *  `src`, with Markdown files that you would like to parse
+   *  `out`, where the HTML output will be generated
+
+   Don't forget to copy a CSS stylesheet from this project. You specify what stylesheet to use in a YAML header (see below).
+
+3. Execute the HarukiNotes version appropiate for your operative system, passing as arguments both folders:
+
+   ```
+   harukinotes-win src out
+   harukinotes-linux src out
+   harukinotes-macos src out
+   ```
+
+   If you use different names for the folder, use them instead of `src` and `out`.
+
+
+
+## Editing the project
 
 1. Download and open this Node.js project
 2. Install dependencies:
@@ -26,14 +48,6 @@ npm install pkg --global
 pkg .
 ```
 
-Add it to your `PATH` variable and then you can parse your Markdown from anywhere using the command line (depending on your operative system)
-
-```
-harukinotes-win src out
-harukinotes-linux src out
-harukinotes-macos src out
-```
-
 
 ## Markdown metadata
 
@@ -49,6 +63,7 @@ stylesheet: ../css/haruki_blue.css
 ```
 
 Here you can enter a title for the HTML document, a subtitle (optional), the author and the path to the stylesheet to use (relative to the `.md` file).
+
 
 
 ## Parsing Sass stylesheets
