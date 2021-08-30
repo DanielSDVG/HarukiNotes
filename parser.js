@@ -14,6 +14,8 @@ md.use(require('markdown-it-footnote'));
 md.use(require('markdown-it-deflist'));
 md.use(require('markdown-it-abbr'));
 md.use(require('markdown-it-container'));
+md.use(require('markdown-it-highlightjs'))
+
 md.use(require('./markdown_modules/markdown-it-katex'), {
   throwOnError: true,
   macros: {

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>HarukiNotes test page</title><link rel="stylesheet" href="../css/haruki_blue.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous"><style>@page {
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>HarukiNotes test page</title><link rel="stylesheet" href="../css/haruki_blue.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/vs.min.css"><style>@page {
   @top-left {
     content: "DanielSDVG";
   }
@@ -61,15 +61,38 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">â€
 <h6>Heading 6</h6>
 <hr>
 <h2>Code block example</h2>
-<pre><code class="language-css">p {
-  color: red;
+<pre><code class="hljs language-css"><span class="hljs-selector-tag">p</span> {
+  <span class="hljs-attribute">color</span>: red;
 }
 </code></pre>
+<h2>Table Example</h2>
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>**Bold text** __Bold text__</code></td>
+<td><strong>Bold text</strong> <strong>Bold text</strong></td>
+</tr>
+<tr>
+<td><code>*Italic text* _Italic text_</code></td>
+<td><em>Italic text</em> <em>Italic text</em></td>
+</tr>
+<tr>
+<td><code>~~Strikethrough text~~</code></td>
+<td><s>Strikethrough text</s></td>
+</tr>
+</tbody>
+</table>
 <h2>Definition List Example</h2>
 <dl>
 <dt>Term 1</dt>
 <dd>
-<p>Definition 1</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat at quam et vestibulum. Praesent vitae condimentum nisi. Vivamus ac consequat tortor, quis euismod purus. Praesent ut iaculis est, ac rutrum mauris. Vivamus urna augue, tristique eu lacus nec, imperdiet ornare libero. Morbi eleifend tellus eu viverra luctus. Duis at eros volutpat dolor vehicula tempor ut sit amet erat.</p>
 </dd>
 <dt>Term 2</dt>
 <dd>

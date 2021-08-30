@@ -57,10 +57,19 @@ p {
 ```
 
 
+## Table Example
+
+Syntax | Result
+------ | ------
+`**Bold text** __Bold text__` | **Bold text** __Bold text__
+`*Italic text* _Italic text_` | *Italic text* _Italic text_
+`~~Strikethrough text~~` | ~~Strikethrough text~~
+
+
 ## Definition List Example
 
 Term 1
-  ~ Definition 1
+  ~ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat at quam et vestibulum. Praesent vitae condimentum nisi. Vivamus ac consequat tortor, quis euismod purus. Praesent ut iaculis est, ac rutrum mauris. Vivamus urna augue, tristique eu lacus nec, imperdiet ornare libero. Morbi eleifend tellus eu viverra luctus. Duis at eros volutpat dolor vehicula tempor ut sit amet erat.
 
 Term 2
   ~ Definition 2a

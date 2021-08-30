@@ -47,9 +47,19 @@
   li + li {
     margin-top: t.$content-sub-spacing;
   }
+
+  // Definition lists
   dt {
+    float: left;
+    padding-right: 0.5em;
     font-weight: t.$dl-font-weight;
-    color: t.$col-secondary
+    color: t.$col-secondary;
+    &::after {
+      content: " ➝";
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 0;
+      text-align: left;
+    }
   }
   dd {
     margin-left: t.$dd-indent;
@@ -75,6 +85,9 @@
     border: t.$base-border-width solid t.$col-primary;
     border-radius: t.$border-radius;
     overflow-x: auto;
+    > code {
+      padding: 0;
+    }
   }
 
   // Tables

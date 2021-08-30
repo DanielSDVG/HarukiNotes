@@ -9,26 +9,26 @@ $-blue: hsl(219, 100%, 58%);
 $-purple: hsl(273, 98%, 59%);
 $-pink: hsl(303, 100%, 74%);
 
-$col-text: black;
 
-$col-primary-lighter: hsl(200, 100%, 85%);
-$col-primary: $-lightblue;
-$col-primary-darker: hsl(200, 100%, 41%);
-$col-selection: hsla(200, 100%, 63%, 0.3);
+$col-text: black !default;
 
-$col-table-border: hsl(200, 100%, 72%);
+$col-primary-lighter: hsl(200, 100%, 85%) !default;
+$col-primary: hsl(200, 100%, 63%) !default;
+$col-primary-darker: hsl(200, 100%, 41%) !default;
+$col-selection: hsla(200, 100%, 63%, 0.3) !default;
+$col-table-border: hsl(200, 100%, 72%) !default;
 
-$col-secondary: $-purple;
-$col-code: hsl(332, 100%, 60%);
+$col-secondary: $-purple !default;
+$col-code: hsl(332, 100%, 60%) !default;
 
-$col-link: $-blue;
-$col-visited: $-purple;
+$col-link: $-blue !default;
+$col-visited: $-purple !default;
 
-$col-success: $-green;
-$col-warning: $-yellow;
-$col-danger: $-red;
+$col-success: $-green !default;
+$col-warning: $-yellow !default;
+$col-danger: $-red !default;
 
-$col-mark: hsla(60, 100%, 50%, 0.4);
+$col-mark: hsla(60, 100%, 50%, 0.4) !default;
 
 // Typography
 // =============================================================================

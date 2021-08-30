@@ -1,4 +1,5 @@
-@use 'minireset.css';
-@use 'haruki_blue/generic';
-@use 'haruki_blue/document';
-@use 'haruki_blue/print';
+@use 'partials/minireset.css';
+@use 'partials/theme';
+@use 'partials/generic';
+@use 'partials/document';
+@use 'partials/print';
