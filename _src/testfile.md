@@ -73,9 +73,11 @@ Syntax | Result
 
 ## Some list styles
 
+The following lists have been formatted with [`markdown-it-attrs`](https://www.npmjs.com/package/markdown-it-attrs).
+
 Advantages of using HarukiNotes:
 
-+ Minimalistic $\mIn 3$
++ Minimalistic
 + Free and open source
 + You can make beautiful documents with it
 
