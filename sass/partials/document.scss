@@ -89,16 +89,8 @@
 
   // Definition lists
   dt {
-    float: left;
-    padding-right: 0.5em;
     font-weight: t.$dl-font-weight;
     color: t.$col-secondary;
-    &::after {
-      content: " ➝";
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 0;
-      text-align: left;
-    }
   }
   dd {
     margin-left: t.$dd-indent;
