@@ -22,6 +22,12 @@ This is a small project to generate cute HTML documents out of Markdown files.
 
    If you use different names for the folder, use them instead of `src` and `out`.
 
+   You can enter LaTeX formulas surrounded by `$$...$$` or `$...$`, and even define macros to use among all Markdown files in the `src` directory. To share macros between all documents, add the `--macros` option at the end, with the name of a YAML file with macro definitions (see example file):
+
+   ```
+   harukinotes-win src out --macros macros.yaml
+   ```
+
 
 
 ## Editing the project
@@ -41,7 +47,7 @@ This is a small project to generate cute HTML documents out of Markdown files.
 
 This will convert Markdown files in the `_src` folder into HTML files in the `_out` folder. Any files such as images and other resources that are not `.md` nor `.html` files will also be copied from `_src` to `_out`.
 
-You could also generate an executable using `pkg`:
+You can also generate an executable using `pkg`:
 
 ```
 npm install pkg --global

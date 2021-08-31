@@ -1,0 +1,26 @@
+# Example macros.yaml file
+# I localized to Spanish some mathematical function names
+
+# Number sets
+
+\N: \mathbb{N}
+\Z: \mathbb{Z}
+\Q: \mathbb{Q}
+\R: \mathbb{R}
+\C: \mathbb{C}
+
+
+# Trigonometry
+
+\sen: \operatorname{sen}
+\tg: \operatorname{tg}
+\arcsen: \operatorname{arcsen}
+\arccos: \operatorname{arccos}
+\arctg: \operatorname{arctg}
+
+
+# Misc
+
+\mAx: \operatorname{\text{m\'{a}}x}
+\mIn: \operatorname{\text{m\'{\i}}n}
+\lIm: \operatornamewithlimits{{\text{l\'{\i}m}}}\limits_{#1}

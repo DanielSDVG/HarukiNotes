@@ -75,7 +75,7 @@ Syntax | Result
 
 Advantages of using HarukiNotes:
 
-+ Minimalistic
++ Minimalistic $\mIn 3$
 + Free and open source
 + You can make beautiful documents with it
 

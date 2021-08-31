@@ -3,22 +3,37 @@ const glob = require('glob');
 const path = require('path');
 
 const parser = require('./parser.js');
+const yaml = require('js-yaml');
 
 
 // =======================================================================================
 
 parseArgs = function(args) {
   const result = {
-    error: args.length !== 2,
+    error: false,
     sourcedir: null,
-    destdir: null
+    destdir: null,
+    macros: null
   };
 
-  if (!result.error) {
-    result.sourcedir = args[0];
-    result.destdir = args[1];
-  }
+  switch (args.length) {
 
+    case 2:
+      result.sourcedir = args[0];
+      result.destdir = args[1];
+      break;
+
+    case 4:
+      result.sourcedir = args[0];
+      result.destdir = args[1];
+      result.error = args[2] !== '--macros';
+      result.macros = args[3];
+      break;
+
+    default:
+      result.error = true;
+
+  }
   return result;
 }
 
@@ -28,11 +43,35 @@ ensureDirectory = function(dirname) {
   }
 }
 
+readKatexMacroFile = function(filename) {
+  let ok = true;
+  if (filename) {
+    try {
+      const doc = yaml.load(fs.readFileSync(filename, 'utf8'));
+      if (typeof doc === 'object') {
+        console.log(`${Object.keys(doc).length} KaTeX macros loaded`);
+        parser.setupKatex(doc);
+      } else {
+        console.error(`YAML file "${filename}" does not contain an object.`);
+        ok = false;
+      }
+    } catch (err) {
+      console.error(err.message);
+      ok = false;
+    }
+  } else {
+    parser.setupKatex({});
+  }
+  return ok;
+}
+
+
+
 
 // =======================================================================================
 
 const parsedArgs = parseArgs(process.argv.slice(2));
-if (!parsedArgs.error) {
+if (!parsedArgs.error && readKatexMacroFile(parsedArgs.macros)) {
   fs.stat(parsedArgs.sourcedir, (err, stats) => {
     if (!err) {
       if (stats.isDirectory()) {
@@ -86,8 +125,10 @@ if (!parsedArgs.error) {
   console.log('Convert Markdown files to HTML.');
   console.log();
   console.log('Usage:');
-  console.log('  $ node harukinotes [source dir] [output dir]');
+  console.log('  $ node harukinotes <source dir> <output dir>');
+  console.log('  $ node harukinotes <source dir> <output dir> --macros <macros>');
   console.log();
-  console.log('  [source dir]: where to look for files to convert');
-  console.log('  [output dir]: where to output the result');
+  console.log('  <source dir>: where to look for files to convert');
+  console.log('  <output dir>: where to output the result');
+  console.log('  <macros>: the name of a YAML file that contains KaTeX macros');
 }

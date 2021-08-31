@@ -23,23 +23,15 @@ md.use(require('markdown-it-attrs', {
   allowedAttributes: ['id', 'class', 'style']
 }));
 
-md.use(require('./markdown_modules/markdown-it-katex'), {
-  throwOnError: true,
-  macros: {
-    '\\sen': '\\operatorname{sen}',
-    '\\tg': '\\operatorname{tg}',
-    '\\arcsen': '\\operatorname{arcsen}',
-    '\\arccos': '\\operatorname{arccos}',
-    '\\arctg': '\\operatorname{arctg}'
-  }
-});
-
+const mdkatex = require('./markdown_modules/markdown-it-katex')
 const yaml = require('js-yaml');
+
+let katexReady = false;
+let template;
 
 
 // =======================================================================================
 
-let template;
 try {
   template = fs.readFileSync(`${__dirname}/template.pug`, 'utf-8');
 } catch (err) {
@@ -105,7 +97,18 @@ function parse(srcpath, outpath, cb) {
   })
 }
 
+function setupKatex(macros) {
+  if (!katexReady) {
+    md.use(mdkatex, {
+      throwOnError: true,
+      macros: macros
+    });
+    katexReady = true;
+  }
+}
+
 
 // =======================================================================================
 
 exports.parse = parse;
+exports.setupKatex = setupKatex;
