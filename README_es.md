@@ -2,7 +2,7 @@
 
 Este es un pequeño proyecto para generar documentos HTML bonitos a partir de ficheros Markdown.
 
-Tenga en cuenta que hay mejores herramientas por allí para este propósito, como [RMarkdown](https://rmarkdown.rstudio.com/).
+Ten en cuenta que hay mejores herramientas por allí para este propósito, como [RMarkdown](https://rmarkdown.rstudio.com/).
 La realización de este proyecto no es más que un reto que me he propuesto yo mismo para mí y no necesariamente tiene que
 seguir ciertas buenas prácticas de programación y configuración.
 
