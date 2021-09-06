@@ -1,14 +1,25 @@
+[Instrucciones en español]()
+
+
 # HarukiNotes - a simple HTML document generator from Markdown
 
 This is a small project to generate cute HTML documents out of Markdown files.
 
+Please note that there are better tools over there that make HTML documents from Markdown files, such as
+[RMarkdown](https://rmarkdown.rstudio.com/). This is just a personal programming challenge I proposed myself and may
+not follow best practices.
+
+
+
 ## How to use it
 
-1. To use this project, download this project and add the `bin` folder to your `PATH` variable.
+1. To use this project, download this project and add the `bin` folder to your `PATH` variable. Investigate how to edit
+   your `PATH` variable if you don't know how to do this.
+
 2. Create two folders from anywhere:
 
    *  `src`, with Markdown files that you would like to parse
-   *  `out`, where the HTML output will be generated
+   *  `out`, where the HTML output will be generated (you can view these files from your Internet browser)
 
    Don't forget to copy a CSS stylesheet from this project. You specify what stylesheet to use in a YAML header (see below).
 
@@ -28,6 +39,7 @@ This is a small project to generate cute HTML documents out of Markdown files.
    harukinotes-win src out --macros macros.yaml
    ```
 
+4. Open one of the HTML files in the `out` folder to see the result.
 
 
 ## Editing the project
@@ -69,6 +81,8 @@ stylesheet: ../css/haruki_blue.css
 ```
 
 Here you can enter a title for the HTML document, a subtitle (optional), the author and the path to the stylesheet to use (relative to the `.md` file).
+
+Check out the `_src` folder for an example on how to make documents.
 
 
 
