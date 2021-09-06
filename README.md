@@ -1,4 +1,4 @@
-[Instrucciones en español]()
+[Instrucciones en español](https://github.com/DanielSDVG/HarukiNotes/blob/master/README_es.md)
 
 
 # HarukiNotes - a simple HTML document generator from Markdown
