@@ -9,8 +9,7 @@ seguir ciertas buenas prácticas de programación y configuración.
 
 ## Cómo usarlo
 
-1. Para usar este proyecto, descárgalo y añade la carpeta `bin` a la variable `PATH` de tu sistema operativo. (Si no sabes lo 
-   que es, investígalo.)
+1. Para usar este proyecto, descárgalo y añade la carpeta `bin` a la variable `PATH` de tu sistema operativo.
 
 2. En cualquier directorio, crea dos carpetas, por ejemplo:
 

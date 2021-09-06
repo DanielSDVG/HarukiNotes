@@ -13,8 +13,7 @@ not follow best practices.
 
 ## How to use it
 
-1. To use this project, download this project and add the `bin` folder to your `PATH` variable. Investigate how to edit
-   your `PATH` variable if you don't know how to do this.
+1. To use this project, download this project and add the `bin` folder to your `PATH` variable.
 
 2. Create two folders from anywhere:
 
