@@ -40,6 +40,34 @@ seguir ciertas buenas prácticas de programación y configuración.
 4. Abre uno de los ficheros HTML en la carpeta `out` para ver el resultado.
 
 
+## Editar el proyecto
+
+Para editar este proyecto necesitarás tener Node.js instalado.
+
+1. Descarga y abre este proyecto.
+2. Instala las dependencias:
+
+   ```
+   npm install glob js-yaml katex markdown-it markdown-it-bracketed-spans markdown-it-attrs markdown-it-emoji markdown-it-highlightjs markdown-it-sub markdown-it-sup markdown-it-mark markdown-it-ins markdown-it-footnote markdown-it-deflist markdown-it-abbr markdown-it-container pug
+   ```
+
+3. Ejecútalo de esta forma:
+
+   ```
+   node harukinotes _src _out
+   ```
+
+Esto convierte los ficheros Markdown en la carpeta `_src` en ficheros HTML y los coloca en la carpeta `_out`. Las imágenes
+y otros recursos que no sean ficheros `.md` ni `.html` también se copiarán de `_src` a `_out`.
+
+También puedes generar un ejecutable con `pkg`:
+
+```
+npm install pkg --global
+pkg .
+```
+
+
 ## Metadatos de los ficheros Markdown
 
 Los ficheros `.md` han de incluir una cabecera YAML al principio. Por ejemplo:
@@ -53,6 +81,28 @@ stylesheet: ../css/haruki_blue.css
 ---
 ```
 
-Puedes introducir, respectivamente, el título del documento, un subtítulo opcional, el autor y la ruta a la hoja de estilos CSS a usar (relativa al fichero `.md`).
+Aquí puedes introducir, respectivamente, el título del documento, un subtítulo opcional, el autor y la ruta a la hoja de 
+estilos CSS a usar (relativa al fichero `.md`).
 
 Consulta la carpeta `_src` para ver un ejemplo de cómo escribir un documento.
+
+
+## Transpilado de hojas de estilos Sass
+
+Para mejor personalización, recomiendo instalar las siguientes dependencias:
+
+```
+npm install gulp-cli --global
+npm install gulp gulp-sass sass --save-dev
+```
+
+De esta forma se puede usar [Gulp](https://gulpjs.com/) para transpilar las hojas de estilos [Sass](https://sass-lang.com) como CSS convencional. Los ficheros Sass de los temas de ejemplo se encuentran en la carpeta `sass` de este repositorio, y la salida se escribirá en el directorio `css`.
+
+Una vez hayas instalado Gulp, usa
+
+```
+gulp sass
+```
+
+para convertir tu Sass en CSS. Este comando ignora los ficheros en subdirectorios de `css` y los ficheros parciales de Sass
+(los que comienzan por `_`).

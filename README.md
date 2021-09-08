@@ -43,6 +43,8 @@ not follow best practices.
 
 ## Editing the project
 
+To edit this project you will need to install Node.js in case you don't have it.
+
 1. Download and open this Node.js project
 2. Install dependencies:
 
