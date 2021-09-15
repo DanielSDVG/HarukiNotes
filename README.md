@@ -58,7 +58,8 @@ To edit this project you will need to install Node.js in case you don't have it.
    node harukinotes _src _out
    ```
 
-This will convert Markdown files in the `_src` folder into HTML files in the `_out` folder. Any files such as images and other resources that are not `.md` nor `.html` files will also be copied from `_src` to `_out`.
+This will convert Markdown files in the `_src` folder into HTML files in the `_out` folder. Any files such as images and other 
+resources that are not `.md` nor `.html` files will also be copied from `_src` to `_out`.
 
 You can also generate an executable using `pkg`:
 
@@ -77,11 +78,12 @@ All `.md` files must include a YAML header in the beginning of the file, like th
 title: HarukiNotes test page
 subtitle: This is just a test
 author: DanielSDVG
-stylesheet: ../css/haruki_blue.css
+stylesheets: [../css/haruki_blue.css]
 ---
 ```
 
-Here you can enter a title for the HTML document, a subtitle (optional), the author and the path to the stylesheet to use (relative to the `.md` file).
+Here you can enter a title for the HTML document, a subtitle (optional), the author and the path to the stylesheet or 
+stylesheets to use (all relative to the `.md` file).
 
 Check out the `_src` folder for an example on how to make documents.
 

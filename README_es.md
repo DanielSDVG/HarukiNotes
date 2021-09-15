@@ -77,12 +77,12 @@ Los ficheros `.md` han de incluir una cabecera YAML al principio. Por ejemplo:
 title: Página de prueba de HarukiNotes
 subtitle: Esto es solo una prueba
 author: DanielSDVG
-stylesheet: ../css/haruki_blue.css
+stylesheets: [../css/haruki_blue.css]
 ---
 ```
 
-Aquí puedes introducir, respectivamente, el título del documento, un subtítulo opcional, el autor y la ruta a la hoja de 
-estilos CSS a usar (relativa al fichero `.md`).
+Aquí puedes introducir, respectivamente, el título del documento, un subtítulo opcional, el autor y la ruta a la hoja u hojas de 
+estilos CSS a usar (relativas al fichero `.md`).
 
 Consulta la carpeta `_src` para ver un ejemplo de cómo escribir un documento.
 
