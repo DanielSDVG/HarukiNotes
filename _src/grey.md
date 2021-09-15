@@ -2,7 +2,7 @@
 title: HarukiNotes test page
 subtitle: This is also a cheat sheet
 author: DanielSDVG
-stylesheets: [../css/haruki_pink.css]
+stylesheets: [../css/haruki_grey.css]
 ---
 
 This Markdown-to-HTML converter is powered by `markdown-it` and its plugins. [Check it out!](https://github.com/markdown-it/markdown-it)
@@ -11,7 +11,7 @@ You can use this document both as a cheat sheet and a test page to develop your 
 
 # Inline tags
 
-Standard Markdown syntax: 
+Standard Markdown syntax:
 
 Feature         | Syntax                                  | Result
 --------------- | --------------------------------------- | ---------------------------

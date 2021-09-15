@@ -57,6 +57,7 @@ $title-size: 225%;
 $subtitle-size: 100%;
 $heading-sizes: 200%, 175%, 150%, 140%, 130%, 120%;
 $heading-margin-top: 2rem, 1.75rem, 1.5rem, 1.4rem, 1.3rem, 1.2rem;
+$heading-rule-widths: 5px 2px;
 
 $line-height: 1.3;
 $small-font-size: 80%;
@@ -80,6 +81,9 @@ $table-caption-side: bottom;
 $table-border-width: $base-border-width;
 $thead-tbody-border-width: 2 * $base-border-width;
 $table-cell-padding: 0.5rem;
+
+$heading-rule-ypos: 0.5rem;
+
 
 
 // Layout settings

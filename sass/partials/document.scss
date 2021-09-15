@@ -34,7 +34,7 @@ body {
   }
 
   // Paragraphs
-  > p:not(#subtitle),
+  > p,
   > ul > li,
   > ol > li,
   > dl > dd {
@@ -46,10 +46,25 @@ body {
     font-family: t.$heading-font-family;
     color: t.$col-primary-darker;
   }
+  h1 {
+    font-variant: small-caps;
+  }
   @for $i from 1 through 6 {
     h#{$i} {
       font-size: list.nth(t.$heading-sizes, $i);
       margin-top: list.nth(t.$heading-margin-top, $i);
+      @if $i <= list.length(t.$heading-rule-widths) {
+        &::after {
+          content: " ";
+          display: block;
+          position: relative;
+          right: 0;
+          bottom: t.$heading-rule-ypos;
+          z-index: -1;
+          height: list.nth(t.$heading-rule-widths, $i);
+          background-color: t.$col-primary-lighter;
+        }
+      }
     }
   }
 
@@ -77,6 +92,15 @@ body {
   }
   dd {
     margin-left: t.$dd-indent;
+    position: relative;
+    &::before {
+      content: "> ";
+      position: absolute;
+      display: block;
+      width: t.$list-indent;
+      left: 0 - t.$list-indent;
+      color: t.$col-secondary;
+    }
   }
   dt, dd {
     & + dt, & + dd {

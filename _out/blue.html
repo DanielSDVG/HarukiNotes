@@ -1,7 +1,7 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>HarukiNotes test page</title><link rel="stylesheet" href="../css/haruki_blue.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/vs.min.css"></head><body><h1 id="title">HarukiNotes test page</h1><p id="subtitle">This is also a cheat sheet</p><div id="content"><p>This Markdown-to-<abbr title="Hypertext Markup Language">HTML</abbr> converter is powered by <code>markdown-it</code> and its plugins. <a href="https://github.com/markdown-it/markdown-it">Check it out!</a></p>
 <p>You can use this document both as a cheat sheet and a test page to develop your own themes.</p>
-<h2>Inline tags</h2>
-<p>Standard</p>
+<h1>Inline tags</h1>
+<p>Standard Markdown syntax:</p>
 <table>
 <thead>
 <tr>
@@ -112,17 +112,17 @@ becomes ©, and <code>+-</code> becomes ±.</p>
 <p>Currently, the only attributes supported are <code>id</code>, <code>class</code> and <code>style</code>.</p>
 </li>
 </ul>
-<h2>Block tags</h2>
+<h1>Block tags</h1>
 <p>These are the heading styles:</p>
 <hr>
 <h1>Heading 1</h1>
 <h2>Heading 2</h2>
-<h2>Heading 3</h2>
-<h3>Heading 4</h3>
-<h4>Heading 5</h4>
-<h4>Heading 6</h4>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
 <hr>
-<h3>Code blocks</h3>
+<h2>Code blocks</h2>
 <pre><code class="hljs language-markdown"><span class="hljs-code">```css
 p {
   color: red;
@@ -133,7 +133,7 @@ p {
   <span class="hljs-attribute">color</span>: red;
 }
 </code></pre>
-<h3>Block-level <abbr title="Hypertext Markup Language">HTML</abbr> attributes</h3>
+<h2>Block-level <abbr title="Hypertext Markup Language">HTML</abbr> attributes</h2>
 <p>The following examples show usage examples of the <a href="https://www.npmjs.com/package/markdown-it-attrs"><code>markdown-it-attrs</code></a> syntax
 to style certain block-level elements. HarukiNotes themes provide several helper classes to allow more styling flexibility.</p>
 <p>Advantages of using HarukiNotes:</p>
@@ -155,7 +155,7 @@ default PDF converter from Windows 10, but it does not fully implement the <a hr
 <li>Feel free to try it if you want!</li>
 <li>Hope you like it as much as I liked working on this project</li>
 </ul>
-<h3>Display formulas</h3>
+<h2>Display formulas</h2>
 <pre><code class="hljs language-markdown">This is a display formula, rendered with KaTeX:
 
 $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
@@ -174,7 +174,7 @@ H400000v40H845.2724
 s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
 c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
 M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.12661100000000003em;"><span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
-<h3>Quotes</h3>
+<h2>Quotes</h2>
 <pre><code class="hljs language-markdown"><span class="hljs-quote">&gt; &quot;Measuring programming progress by lines of code is like</span>
 <span class="hljs-quote">&gt; measuring aircraft building progress by weight.&quot;</span>
 <span class="hljs-quote">&gt;
@@ -185,7 +185,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 measuring aircraft building progress by weight.”</p>
 <p>– Bill Gates</p>
 </blockquote>
-<h3><a href="https://github.com/markdown-it/markdown-it-deflist">Definition lists</a></h3>
+<h2><a href="https://github.com/markdown-it/markdown-it-deflist">Definition lists</a></h2>
 <pre><code class="hljs language-markdown">Term 1
 ~   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat at quam et vestibulum.
 <span class="hljs-code">    Praesent vitae condimentum nisi. Vivamus ac consequat tortor, quis euismod purus.
@@ -212,7 +212,7 @@ Praesent vitae condimentum nisi. Vivamus ac consequat tortor, quis euismod purus
 <p>Definition 2b</p>
 </dd>
 </dl>
-<h3><a href="https://github.com/markdown-it/markdown-it-footnote">Footnotes</a></h3>
+<h2><a href="https://github.com/markdown-it/markdown-it-footnote">Footnotes</a></h2>
 <pre><code class="hljs language-markdown">Footnote 1 link[^first].
 
 Footnote 2 link[^second].
@@ -232,7 +232,7 @@ Duplicated footnote reference[^second].
 <p>Footnote 2 link<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>.</p>
 <p>Inline footnote<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup> definition.</p>
 <p>Duplicated footnote reference<sup class="footnote-ref"><a href="#fn2" id="fnref2:1">[2:1]</a></sup>.</p>
-<h3><a href="https://github.com/markdown-it/markdown-it-abbr">Abbreviations</a></h3>
+<h2><a href="https://github.com/markdown-it/markdown-it-abbr">Abbreviations</a></h2>
 <pre><code class="hljs language-markdown"><span class="hljs-emphasis">*[HTML]: Hypertext Markup Language
 </span></code></pre>
 <p>Hover over any occurrence of <abbr title="Hypertext Markup Language">HTML</abbr> to see the result.</p>

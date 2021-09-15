@@ -9,9 +9,9 @@ This Markdown-to-HTML converter is powered by `markdown-it` and its plugins. [Ch
 
 You can use this document both as a cheat sheet and a test page to develop your own themes.
 
-## Inline tags
+# Inline tags
 
-Standard 
+Standard Markdown syntax:
 
 Feature         | Syntax                                  | Result
 --------------- | --------------------------------------- | ---------------------------
@@ -70,7 +70,7 @@ Notes:
     Currently, the only attributes supported are `id`, `class` and `style`.
 
 
-## Block tags
+# Block tags
 
 These are the heading styles:
 
@@ -78,16 +78,16 @@ ___
 
 # Heading 1
 ## Heading 2
-## Heading 3
-### Heading 4
-#### Heading 5
-#### Heading 6
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
 
 ---
 
 
 
-### Code blocks
+## Code blocks
 
 `````markdown
 ```css
@@ -104,7 +104,7 @@ p {
 ```
 
 
-### Block-level HTML attributes
+## Block-level HTML attributes
 
 The following examples show usage examples of the [`markdown-it-attrs`](https://www.npmjs.com/package/markdown-it-attrs) syntax
 to style certain block-level elements. HarukiNotes themes provide several helper classes to allow more styling flexibility.
@@ -136,7 +136,7 @@ Things to do with it:
 
 
 
-### Display formulas
+## Display formulas
 
 ```markdown
 This is a display formula, rendered with KaTeX:
@@ -149,7 +149,7 @@ This is a display formula, rendered with KaTeX:
 $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 
 
-### Quotes
+## Quotes
 
 ```markdown
 > "Measuring programming progress by lines of code is like
@@ -165,7 +165,7 @@ $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 
 
 
-### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
+## [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
 
 ```markdown
 Term 1
@@ -193,7 +193,7 @@ Term 2
 
 
 
-### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
+## [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
 
 ```markdown
 Footnote 1 link[^first].
@@ -229,7 +229,7 @@ Duplicated footnote reference[^second].
 
 
 
-### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
+## [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
 
 ```markdown
 *[HTML]: Hypertext Markup Language

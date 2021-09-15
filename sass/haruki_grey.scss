@@ -1,0 +1,14 @@
+@use 'partials/minireset.css';
+@use 'partials/theme' with (
+
+  $col-primary-lighter: hsl(0, 0%, 84%),
+  $col-primary: hsl(0, 0%, 61%),
+  $col-primary-darker: hsl(0, 0%, 37%),
+  $col-selection: hsla(0, 0%, 68%, 0.3),
+  $col-table-border: hsl(0, 0%, 80%)
+
+);
+@use 'partials/generic';
+@use 'partials/helpers';
+@use 'partials/document';
+@use 'partials/print';
