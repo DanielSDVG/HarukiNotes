@@ -1,0 +1,86 @@
+@use 'theme' as t;
+
+
+
+// Simple color markup
+// ===================
+
+.text-success {
+  color: t.$col-success;
+}
+.text-danger {
+  color: t.$col-danger;
+}
+
+
+
+// Alignment
+// =========
+
+.align-left {
+  text-align: left;
+}
+.align-center {
+  text-align: center;
+}
+.align-right {
+  text-align: right;
+}
+.justify {
+  text-align: justify;
+}
+
+
+
+// List styles
+// =========
+
+#content {
+  .li-plus ::marker, .li-plus::marker,
+  .li-minus ::marker, .li-minus::marker,
+  .li-gt ::marker, .li-gt::marker {
+    font-size: 120%;
+    line-height: 0;
+  }
+
+  .li-plus ::marker {
+    content: '+ ';
+    color: t.$col-success;
+  }
+  .li-minus ::marker {
+    content: '- ';
+    color: t.$col-danger;
+  }
+  .li-gt ::marker {
+    content: '> ';
+    color: t.$col-primary-darker;
+  }
+
+  .li-plus::marker {
+    content: '+ ';
+    color: t.$col-success;
+  }
+  .li-minus::marker {
+    content: '- ';
+    color: t.$col-danger;
+  }
+  .li-gt::marker {
+    content: '> ';
+    color: t.$col-primary-darker;
+  }
+}
+
+
+
+// Paged media
+// ===========
+
+@media print {
+  .page-break-before {
+    break-before: always;
+  }
+  
+  .page-break-after {
+    break-after: always;
+  }
+}

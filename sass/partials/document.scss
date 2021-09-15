@@ -1,11 +1,28 @@
 @use 'sass:list';
 @use 'theme' as t;
 
+body {
+  padding: t.$screen-margin;
+}
+#title, #subtitle {
+  text-align: center;
+  color: t.$col-primary-darker;
+  margin-bottom: t.$content-spacing;
+}
+#title {
+  font-family: t.$heading-font-family;
+  font-size: t.$title-size;
+  text-shadow: 2px 2px 0 t.$col-primary-lighter;
+}
+#subtitle {
+  font-size: t.$subtitle-size;
+  letter-spacing: 0.1em;
+}
+
 #content {
 
   width: 100%;
   max-width: t.$screen-max-width;
-  padding: t.$screen-margin;
   margin: auto;
 
   // Spacing
@@ -51,40 +68,6 @@
   }
   li + li {
     margin-top: t.$content-sub-spacing;
-  }
-
-  // Styles for lists
-  .li-plus ::marker, .li-plus::marker,
-  .li-minus ::marker, .li-minus::marker,
-  .li-gt ::marker, .li-gt::marker {
-    font-size: 120%;
-    line-height: 0;
-  }
-
-  .li-plus ::marker {
-    content: '+ ';
-    color: t.$col-success;
-  }
-  .li-minus ::marker {
-    content: '- ';
-    color: t.$col-danger;
-  }
-  .li-gt ::marker {
-    content: '> ';
-    color: t.$col-primary-darker;
-  }
-
-  .li-plus::marker {
-    content: '+ ';
-    color: t.$col-success;
-  }
-  .li-minus::marker {
-    content: '- ';
-    color: t.$col-danger;
-  }
-  .li-gt::marker {
-    content: '> ';
-    color: t.$col-primary-darker;
   }
 
   // Definition lists
@@ -181,32 +164,16 @@
   }
 
   // Images
-  p {
-    img, picture, video, embed, object, audio {
-      &:only-child {
-        display: block;
-        margin: auto;
-      }
+  img, picture, video, embed, object, audio {
+    &:only-child {
+      display: block;
+      margin: auto;
     }
   }
 
   // Footnotes
   .footnote-backref {
     font-family: Arial, Helvetica, sans-serif;
-  }
-
-  // Title and subtitle
-  #title, #subtitle {
-    text-align: center;
-    color: t.$col-primary-darker;
-  }
-  #title {
-    font-family: t.$heading-font-family;
-    font-size: t.$title-size;
-    text-shadow: 2px 2px 0 t.$col-primary-lighter;
-  }
-  #subtitle {
-    font-size: t.$subtitle-size;
   }
 
 }

@@ -86,7 +86,7 @@ function parse(srcpath, outpath, cb) {
           topleft: header.author.replace(/"/g, '\\22'),
           topright: header.title.replace(/"/g, '\\22'),
           content: mdResult,
-          stylesheet: header.stylesheet
+          stylesheets: header.stylesheets
         })
         fs.writeFile(outpath, renderedHtml, cb);
       }

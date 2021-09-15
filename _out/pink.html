@@ -1,0 +1,251 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>HarukiNotes test page</title><link rel="stylesheet" href="../css/haruki_pink.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/vs.min.css"></head><body><h1 id="title">HarukiNotes test page</h1><p id="subtitle">This is also a cheat sheet</p><div id="content"><p>This Markdown-to-<abbr title="Hypertext Markup Language">HTML</abbr> converter is powered by <code>markdown-it</code> and its plugins. <a href="https://github.com/markdown-it/markdown-it">Check it out!</a></p>
+<p>You can use this document both as a cheat sheet and a test page to develop your own themes.</p>
+<h2>Inline tags</h2>
+<p>Standard</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Syntax</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bold text</td>
+<td><code>**Bold text** or __Bold text__</code></td>
+<td><strong>Bold text</strong></td>
+</tr>
+<tr>
+<td>Italic text</td>
+<td><code>*Italic text* or _Italic text_</code></td>
+<td><em>Italic text</em></td>
+</tr>
+<tr>
+<td>Inline code</td>
+<td><code>`Inline code`</code></td>
+<td><code>Inline code</code></td>
+</tr>
+<tr>
+<td>Links</td>
+<td><code>[link text](destination)</code></td>
+<td><a href="#">Links</a></td>
+</tr>
+<tr>
+<td>Images</td>
+<td><code>![alt text](source &quot;title attribute&quot;)</code></td>
+<td><img src="haruki.png" alt="A cute anime girl" title="Haruki"></td>
+</tr>
+</tbody>
+</table>
+<p>For images, the <code>title</code> attribute is optional. You can also use a footnote-like syntax:</p>
+<pre><code class="hljs">!<span class="hljs-selector-attr">[A handsome anime boy]</span><span class="hljs-selector-attr">[daimaru]</span>
+</code></pre>
+<p>Then you can specify the image file like this:</p>
+<pre><code class="hljs">[<span class="hljs-symbol">daimaru</span>]: <span class="hljs-link">daimaru.png  &quot;Daimaru&quot;</span>
+</code></pre>
+<p>To obtain:</p>
+<p><img src="daimaru.png" alt="A handsome anime boy" title="Daimaru"></p>
+<p>Several <a href="https://github.com/markdown-it/markdown-it"><code>markdown-it</code></a> plugins enable additional features:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Syntax</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strikethrough</td>
+<td><code>~~Strikethrough text~~</code></td>
+<td><s>Strikethrough text</s></td>
+</tr>
+<tr>
+<td><a href="https://github.com/markdown-it/markdown-it-sup">Superscripts</a></td>
+<td><code>1^st^</code></td>
+<td>1<sup>st</sup></td>
+</tr>
+<tr>
+<td><a href="https://github.com/markdown-it/markdown-it-sub">Subscripts</a></td>
+<td><code>H~2~O</code></td>
+<td>H<sub>2</sub>O</td>
+</tr>
+<tr>
+<td><a href="https://github.com/markdown-it/markdown-it-ins"><code>&lt;ins&gt;</code> tag</a></td>
+<td><code>++Inserted text++</code></td>
+<td><ins>Inserted text</ins></td>
+</tr>
+<tr>
+<td><a href="https://github.com/markdown-it/markdown-it-mark">Higlighted text</a></td>
+<td><code>==Highlighted text==</code></td>
+<td><mark>Highlighted text</mark></td>
+</tr>
+<tr>
+<td><a href="https://github.com/markdown-it/markdown-it-emoji">Emoji</a></td>
+<td><code>:-) :-( 8-) ;)</code></td>
+<td>😃 😦 😎 😉</td>
+</tr>
+<tr>
+<td><a href="https://www.npmjs.com/package/markdown-it-katex">LaTeX formulas</a></td>
+<td><code>$E = mc^2$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">E = mc^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td><a href="https://www.npmjs.com/package/markdown-it-attrs"><abbr title="Hypertext Markup Language">HTML</abbr> attributes</a></td>
+<td><code>**danger**{.text-danger}</code></td>
+<td><strong class="text-danger">danger</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Notes:</p>
+<ul>
+<li>
+<p>Several language-neutral typographic replacements are also implemented, even if you don’t use emoji: for example, <code>(c)</code>
+becomes ©, and <code>+-</code> becomes ±.</p>
+</li>
+<li>
+<p>Formulas are rendered with <a href="https://katex.org/">KaTeX</a>. You can also define macros to use in multiple documents.</p>
+<p>To create a <code>&lt;span&gt;</code> element, enclose its contents between brackets. This allows you to apply <abbr title="Hypertext Markup Language">HTML</abbr> attributes to it.</p>
+<pre><code class="hljs language-markdown">This action is [dangerous]{.text-danger}.
+</code></pre>
+<p>Currently, the only attributes supported are <code>id</code>, <code>class</code> and <code>style</code>.</p>
+</li>
+</ul>
+<h2>Block tags</h2>
+<p>These are the heading styles:</p>
+<hr>
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h2>Heading 3</h2>
+<h3>Heading 4</h3>
+<h4>Heading 5</h4>
+<h4>Heading 6</h4>
+<hr>
+<h3>Code blocks</h3>
+<pre><code class="hljs language-markdown"><span class="hljs-code">```css
+p {
+  color: red;
+}
+```</span>
+</code></pre>
+<pre><code class="hljs language-css"><span class="hljs-selector-tag">p</span> {
+  <span class="hljs-attribute">color</span>: red;
+}
+</code></pre>
+<h3>Block-level <abbr title="Hypertext Markup Language">HTML</abbr> attributes</h3>
+<p>The following examples show usage examples of the <a href="https://www.npmjs.com/package/markdown-it-attrs"><code>markdown-it-attrs</code></a> syntax
+to style certain block-level elements. HarukiNotes themes provide several helper classes to allow more styling flexibility.</p>
+<p>Advantages of using HarukiNotes:</p>
+<ul class="li-plus">
+<li>Minimalistic</li>
+<li>Free and open source</li>
+<li>You can make beautiful documents with it</li>
+</ul>
+<p>Disadvantages:</p>
+<ul class="li-minus">
+<li>You need a PDF converter (such as <a href="https://www.princexml.com/">PrinceXML</a>) to create PDFs from <abbr title="Hypertext Markup Language">HTML</abbr>. You can also use the
+default PDF converter from Windows 10, but it does not fully implement the <a href="https://www.w3.org/TR/css-page-3/">CSS Paged Media spec</a>.</li>
+<li>There are better tools over there. I made this one just for the sake of practicing with Node.js and other tecnologies.</li>
+<li>Typographic choices can be either good or bad, depending on your taste.</li>
+<li class="li-plus">But personally I like them!</li>
+</ul>
+<p>Things to do with it:</p>
+<ul class="li-gt">
+<li>Feel free to try it if you want!</li>
+<li>Hope you like it as much as I liked working on this project</li>
+</ul>
+<h3>Display formulas</h3>
+<pre><code class="hljs language-markdown">This is a display formula, rendered with KaTeX:
+
+$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+</code></pre>
+<p>This is a display formula, rendered with KaTeX:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>x</mi><mo>=</mo><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo><msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.276389em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.590389em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord mathnormal">a</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">−</span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">±</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.913389em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">4</span><span class="mord mathnormal">a</span><span class="mord mathnormal">c</span></span></span><span style="top:-2.873389em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.12661100000000003em;"><span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<h3>Quotes</h3>
+<pre><code class="hljs language-markdown"><span class="hljs-quote">&gt; &quot;Measuring programming progress by lines of code is like</span>
+<span class="hljs-quote">&gt; measuring aircraft building progress by weight.&quot;</span>
+<span class="hljs-quote">&gt;
+&gt; -- Bill Gates</span>
+</code></pre>
+<blockquote>
+<p>“Measuring programming progress by lines of code is like
+measuring aircraft building progress by weight.”</p>
+<p>– Bill Gates</p>
+</blockquote>
+<h3><a href="https://github.com/markdown-it/markdown-it-deflist">Definition lists</a></h3>
+<pre><code class="hljs language-markdown">Term 1
+~   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat at quam et vestibulum.
+<span class="hljs-code">    Praesent vitae condimentum nisi. Vivamus ac consequat tortor, quis euismod purus.
+</span>
+Term 2
+~   Definition 2a
+
+<span class="hljs-code">    Another paragraph for def. 2a
+</span>
+~   Definition 2b
+</code></pre>
+<dl>
+<dt>Term 1</dt>
+<dd>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat at quam et vestibulum.
+Praesent vitae condimentum nisi. Vivamus ac consequat tortor, quis euismod purus.</p>
+</dd>
+<dt>Term 2</dt>
+<dd>
+<p>Definition 2a</p>
+<p>Another paragraph for def. 2a</p>
+</dd>
+<dd>
+<p>Definition 2b</p>
+</dd>
+</dl>
+<h3><a href="https://github.com/markdown-it/markdown-it-footnote">Footnotes</a></h3>
+<pre><code class="hljs language-markdown">Footnote 1 link[^first].
+
+Footnote 2 link[^second].
+
+Inline footnote^[Text of inline footnote.] definition.
+
+Duplicated footnote reference[^second].
+
+[<span class="hljs-symbol">^first</span>]:
+    <span class="hljs-link">Footnote **can have markup** and multiple paragraphs.</span>
+
+<span class="hljs-code">    Indent at least 4 spaces.
+</span>
+[<span class="hljs-symbol">^second</span>]: <span class="hljs-link">Footnote text.</span>
+</code></pre>
+<p>Footnote 1 link<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
+<p>Footnote 2 link<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>.</p>
+<p>Inline footnote<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup> definition.</p>
+<p>Duplicated footnote reference<sup class="footnote-ref"><a href="#fn2" id="fnref2:1">[2:1]</a></sup>.</p>
+<h3><a href="https://github.com/markdown-it/markdown-it-abbr">Abbreviations</a></h3>
+<pre><code class="hljs language-markdown"><span class="hljs-emphasis">*[HTML]: Hypertext Markup Language
+</span></code></pre>
+<p>Hover over any occurrence of <abbr title="Hypertext Markup Language">HTML</abbr> to see the result.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Footnote <strong>can have markup</strong> and multiple paragraphs.</p>
+<p>Indent at least 4 spaces. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>Footnote text. <a href="#fnref2" class="footnote-backref">↩︎</a> <a href="#fnref2:1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>Text of inline footnote. <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+</div></body></html>

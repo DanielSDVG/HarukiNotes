@@ -120,15 +120,3 @@ template, [hidden] {
   background-color: t.$col-selection;
   color: inherit;
 }
-
-
-
-// Simple color markup
-// ===================
-
-.text-success {
-  color: t.$col-success;
-}
-.text-danger {
-  color: t.$col-danger;
-}

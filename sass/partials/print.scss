@@ -3,9 +3,6 @@
 @media print {
   body {
     font-size: t.$print-font-size;
-  }
-
-  #content {
     padding: 0;
   }
 
@@ -20,7 +17,7 @@
 
 @page {
   margin: t.$print-margin;
-
+  /*
   @top-left {
     margin: t.$page-header-margin;
     border-bottom: t.$base-border-width solid t.$col-primary;
@@ -51,9 +48,10 @@
     font-size: t.$print-font-size;
     color: t.$col-primary-darker;
   }
-  
+  */
 }
 
+/*
 @page :first {
   @top-left {
     content: none;
@@ -67,3 +65,4 @@
     content: none;
   }
 }
+*/
