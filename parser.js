@@ -5,6 +5,7 @@ const md = require('markdown-it')({
   typographer: true
 });
 
+md.use(require('markdown-it-table'));
 md.use(require('markdown-it-emoji'));
 md.use(require('markdown-it-sub'));
 md.use(require('markdown-it-sup'));
