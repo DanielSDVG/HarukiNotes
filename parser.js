@@ -61,7 +61,7 @@ function parse(srcpath, outpath, cb) {
           data = data.substr(match[1].length);
 
           // Remove HTML comments
-          data = data.replace(/<!--[\s\S]*?-->/, '');
+          data = data.replace(/<!--[\s\S]*?-->/mg, '');
 
         } catch (err) {
           console.error(`Error parsing "${srcpath}"'s YAML header: ${err.message}`);
