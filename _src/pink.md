@@ -238,3 +238,36 @@ Duplicated footnote reference[^second].
 Hover over any occurrence of HTML to see the result.
 
 *[HTML]: Hypertext Markup Language
+
+
+
+## Tables
+
+```
+Feature         | Syntax                                  | Result
+--------------- | --------------------------------------- | ---------------------------
+Bold text       | `**Bold text** or __Bold text__`        | **Bold text**
+Italic text     | `*Italic text* or _Italic text_`        | *Italic text*
+Inline code     | `` `Inline code` ``                     | `Inline code`
+Links           | `[link text](destination)`              | [Links](#)
+Images          | `![alt text](source "title attribute")` | ![A cute anime girl](haruki.png "Haruki")
+
+{.tw-1-col-10}
+```
+
+Feature         | Syntax                                  | Result
+--------------- | --------------------------------------- | ---------------------------
+Bold text       | `**Bold text** or __Bold text__`        | **Bold text**
+Italic text     | `*Italic text* or _Italic text_`        | *Italic text*
+Inline code     | `` `Inline code` ``                     | `Inline code`
+Links           | `[link text](destination)`              | [Links](#)
+Images          | `![alt text](source "title attribute")` | ![A cute anime girl](haruki.png "Haruki")
+
+{.tw-1-col-10}
+
+HarukiNotes themes provide several classes to adjust column widths.
+
+*   `.tw-<n>-col-<percentage>` adjusts the width of the `n`th column (with `n` from 1 to 4) to the given percentage.
+*   `.tw-<n>-last-col-<percentage>` adjusts the width of the `n`th last column (with `n` from 1 to 4) to the given percentage.
+
+Available percentages go from 5% to 95% (in increments of 5).

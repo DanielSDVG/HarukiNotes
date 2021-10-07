@@ -1,0 +1,26 @@
+// Utility classes to change table column widths.
+//
+// Syntax:
+//   .tw-<n>-col-<percentage>
+//      Applies width: <percentage>% to the <n>th column.
+//   .tw-<n>-last-col-<percentage>
+//      Applies width: <percentage>% to the <n>th last column.
+//
+// Available percentages are 5%, 10%, 15%, 20%, ... 95%.
+// <n> can be from 1 to 4.
+
+@for $i from 1 through 19 {
+  $percentage: 5 * $i;
+  @for $n from 1 through 4 {
+    .tw-#{$n}-col-#{$percentage} {
+      td:nth-child(#{$n}) {
+        width: unquote("#{$percentage}%");
+      }
+    }
+    .tw-#{$n}-last-col-#{$percentage} {
+      td:nth-last-child(#{$n}) {
+        width: unquote("#{$percentage}%");
+      }
+    }
+  }
+}

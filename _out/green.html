@@ -236,6 +236,58 @@ Duplicated footnote reference[^second].
 <pre><code class="hljs language-markdown"><span class="hljs-emphasis">*[HTML]: Hypertext Markup Language
 </span></code></pre>
 <p>Hover over any occurrence of <abbr title="Hypertext Markup Language">HTML</abbr> to see the result.</p>
+<h2>Tables</h2>
+<pre><code class="hljs">Feature         | Syntax                                  | Result
+--------------- | --------------------------------------- | ---------------------------
+Bold text       | `**Bold text** <span class="hljs-literal">or</span> __Bold text__`        | **Bold text**
+Italic text     | `*Italic text* <span class="hljs-literal">or</span> _Italic text_`        | *Italic text*
+Inline code     | `` `Inline code` ``                     | `Inline code`
+Links           | `[link text](destination)`              | [Links](#)
+Images          | `![alt text](source <span class="hljs-string">&quot;title attribute&quot;</span>)` | ![A cute anime girl](haruki.png <span class="hljs-string">&quot;Haruki&quot;</span>)
+
+{.tw-<span class="hljs-number">1</span>-col-<span class="hljs-number">10</span>}
+</code></pre>
+<table class="tw-1-col-10">
+<thead>
+<tr>
+<th>Feature</th>
+<th>Syntax</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bold text</td>
+<td><code>**Bold text** or __Bold text__</code></td>
+<td><strong>Bold text</strong></td>
+</tr>
+<tr>
+<td>Italic text</td>
+<td><code>*Italic text* or _Italic text_</code></td>
+<td><em>Italic text</em></td>
+</tr>
+<tr>
+<td>Inline code</td>
+<td><code>`Inline code`</code></td>
+<td><code>Inline code</code></td>
+</tr>
+<tr>
+<td>Links</td>
+<td><code>[link text](destination)</code></td>
+<td><a href="#">Links</a></td>
+</tr>
+<tr>
+<td>Images</td>
+<td><code>![alt text](source &quot;title attribute&quot;)</code></td>
+<td><img src="haruki.png" alt="A cute anime girl" title="Haruki"></td>
+</tr>
+</tbody>
+</table>
+<p>HarukiNotes themes provide several classes to adjust column widths.</p>
+<ul>
+<li><code>.tw-&lt;n&gt;-col-&lt;percentage&gt;</code> adjusts the width of the <code>n</code>th column (with <code>n</code> from 1 to 4) to the given percentage.</li>
+<li><code>.tw-&lt;n&gt;-last-col-&lt;percentage&gt;</code> adjusts the width of the <code>n</code>th last column (with <code>n</code> from 1 to 4) to the given percentage.</li>
+</ul>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
