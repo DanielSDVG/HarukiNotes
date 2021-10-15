@@ -49,7 +49,7 @@ To edit this project you will need to install Node.js in case you don't have it.
 2. Install dependencies:
 
    ```
-   npm install glob js-yaml katex markdown-it markdown-it-attrs markdown-it-bracketed-spans markdown-it-emoji markdown-it-highlightjs markdown-it-sub markdown-it-sup markdown-it-mark markdown-it-ins markdown-it-footnote markdown-it-deflist markdown-it-abbr markdown-it-container pug
+   npm install
    ```
 
 3. Execute with:
