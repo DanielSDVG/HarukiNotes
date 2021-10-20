@@ -14,6 +14,7 @@ md.use(require('markdown-it-ins'));
 md.use(require('markdown-it-footnote'));
 md.use(require('markdown-it-deflist'));
 md.use(require('markdown-it-abbr'));
+md.use(require('markdown-it-inline-comments'));
 
 // md.use(require('markdown-it-table'));
 // md.use(require('markdown-it-container'));
@@ -59,9 +60,6 @@ function parse(srcpath, outpath, cb) {
 
           // Remove parsed YAML header
           data = data.substr(match[1].length);
-
-          // Remove HTML comments
-          data = data.replace(/<!--[\s\S]*?-->/mg, '');
 
         } catch (err) {
           console.error(`Error parsing "${srcpath}"'s YAML header: ${err.message}`);
