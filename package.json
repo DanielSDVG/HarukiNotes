@@ -4,7 +4,7 @@
   "description": "A small Node.js application to create HTML documents from Markdown using markdown-it.",
   "main": "harukinotes.js",
   "scripts": {
-    "test": "node harukinotes _src _out --macros macros.yaml"
+    "test": "node harukinotes examples/_src examples/_out --macros examples/macros.yaml"
   },
   "repository": {
     "type": "git",

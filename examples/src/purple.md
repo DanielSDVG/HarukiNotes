@@ -2,7 +2,7 @@
 title: HarukiNotes test page
 subtitle: This is also a cheat sheet
 author: DanielSDVG
-stylesheets: [../css/haruki_purple.css]
+stylesheets: [css/haruki_purple.css]
 ---
 
 This Markdown-to-HTML converter is powered by `markdown-it` and its plugins. [Check it out!](https://github.com/markdown-it/markdown-it)
