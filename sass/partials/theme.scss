@@ -40,8 +40,11 @@ $col-mark: hsla(60, 100%, 50%, 0.4) !default;
 // Microsoft Office products. However, I don't think I have a license to
 // distribute it through this repository.
 //
+// A possible alternative available as a webfont for titling is Amatic SC.
+//
 // https://docs.microsoft.com/en-us/typography/font-list/modern-love
 
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
 
 $base-font-family: 'Short Stack', cursive;
@@ -52,7 +55,7 @@ $mono-font-family: 'Consolas', 'Courier New', courier, monospace, monospace;
 $mono-font-size: 100%;
 $mono-font-weight: normal;
 
-$heading-font-family: 'Modern Love', 'Short Stack', sans-serif;
+$heading-font-family: 'Modern Love', 'Amatic SC', 'Short Stack', cursive;
 $title-size: 225%;
 $subtitle-size: 100%;
 $heading-sizes: 200%, 175%, 150%, 140%, 130%, 120%;
