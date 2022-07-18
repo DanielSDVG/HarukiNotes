@@ -1,3 +1,5 @@
+**Note: this project is no longer maintained. You'll most likely find more useful Markdown-to-HTML converters out there or implement your own using the `markdown-it` module.**
+
 [Instrucciones en español](https://github.com/DanielSDVG/HarukiNotes/blob/master/README_es.md)
 
 
